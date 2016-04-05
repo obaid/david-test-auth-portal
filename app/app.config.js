@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('beaconGridAuthenticationApp')
+    .module('beaconGridApp')
     .config(appConfig);
 
 

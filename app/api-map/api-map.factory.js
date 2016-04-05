@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('beaconGridAuthenticationApp')
+        .module('beaconGridApp')
         .factory('apiMapFactory', apiMapFactory); //regularCamelCase
         
     apiMapFactory.$inject = []; //inject dependencies here

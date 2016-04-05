@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('beaconGridAuthenticationApp')
+        .module('beaconGridApp')
         .controller('ForgotPassController', ForgotPassController); //UpperCamelCase
         
     ForgotPassController.$inject = []; //inject dependencies here

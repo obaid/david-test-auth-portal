@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('beaconGridAuthenticationApp')
+        .module('beaconGridApp')
         .controller('EmmanuelTestController', EmmanuelTestController); //UpperCamelCase
         
     EmmanuelTestController.$inject = []; //inject dependencies here

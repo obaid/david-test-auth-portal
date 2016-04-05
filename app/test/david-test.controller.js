@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('beaconGridAuthenticationApp')
+    .module('beaconGridApp')
     .controller('DavidTestController', DavidTestController); //UpperCamelCase
 
   DavidTestController.$inject = ['davidTestFactory']; //inject dependencies here

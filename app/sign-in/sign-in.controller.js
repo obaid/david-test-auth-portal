@@ -1,22 +1,33 @@
 (function() {
-    'use strict';
+  'use strict';
 
-    angular
-        .module('beaconGridAuthenticationApp')
-        .controller('SignInController', SignInController);
+  angular
+    .module('beaconGridApp')
+    .controller('SignInController', SignInController);
 
-    SignInController.$inject = []; //inject dependencies here
+  SignInController.$inject = ['authenticationFactory']; //inject dependencies here
 
-    function SignInController() {
-        /* jshint validthis: true */
-        var vm = this;
+  function SignInController(authenticationFactory) {
+    /* jshint validthis: true */
+    var vm = this;
+    vm.email = '';
+    vm.password = '';
+    vm.signIn = signIn;
 
-        vm.signIn = signIn;
+    console.log(authenticationFactory.isJwtValid());
+    
+    authenticationFactory.isJwtValid().then(function(data) {
+      console.log('promise success data: ');
+      console.log(data);
+    }, function(err) {
+      console.log('promise fail err: ');
+      console.log(err);
+    });
 
-        function signIn() {
-            // factory  code to be added here
-        }
-
+    function signIn() {
+      authenticationFactory.signInUser(vm.email, vm.password);
     }
+
+  }
 
 })();
