@@ -1,0 +1,64 @@
+<html lang="en" ng-app="beaconGridAuthenticationApp">
+<head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <!-- Begin Header -->
+    <h2>This is Header Holder...</h2>
+    <h3>THIS IS FOR TEST ONLY - DESIGN TO COME WHEN ANGULAR TEMPLATE IS IN</h3>
+    <hr />
+    <!-- /End Header -->
+    
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    
+    <!-- Begin Single Page App Holder -->
+    <div class="container">
+        <div ng-view></div><!-- /single page app-->
+    </div>
+    <!-- /End Single Page App Holder -->
+    
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    
+    <!-- Beging footer -->
+    <hr />
+    <ul>
+        <li><a href="#login">Login Page</a></li>
+        <li><a href="#forgot-pass">Forgot Password Page</a></li>
+        <li><a href="#reset-pass">Reset Password Page</a></li>
+        <li><a href="#chris-test">Chris Test Page</a></li>
+        <li><a href="#david-test">David Test Page</a></li>
+        <li><a href="#emmanuel-test">Emmanuel Test Page</a></li>
+    </ul>
+    <!-- /End footer -->
+    
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+  
+    <!-- Your application bootstrap  -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.config.js"></script>
+  
+    <script src="app/api-map/api-map.factory.js"></script>
+    <script src="app/forgot-pass/forgot-pass.controller.js"></script>
+    <script src="app/sign-in/sign-in.controller.js"></script>
+    <script src="app/reset-pass/reset-pass.controller.js"></script>
+    <!-- Begin Test Pages -->
+    <script src="app/test/chris-test.controller.js"></script>
+    <script src="app/test/david-test.controller.js"></script>
+    <script src="app/test/david-test.factory.js"></script>
+    <script src="app/test/emmanuel-test.controller.js"></script>
+    <!-- /End Test Pages -->
+  
+</body>
+</html>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved. 
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+-->
