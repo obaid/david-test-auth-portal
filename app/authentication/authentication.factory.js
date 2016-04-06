@@ -5,14 +5,24 @@
     .module('beaconGridApp')
     .factory('authenticationFactory', authenticationFactory); //regularCamelCase
 
-  authenticationFactory.$inject = ['$http','$q']; //inject dependencies here
+  authenticationFactory.$inject = ['$http','$location','$q','$window']; //inject dependencies here
 
-  function authenticationFactory($http,$q) {
+  function authenticationFactory($http,$location,$q,$window) {
     var service = {
+      generateReturnUrl: generateReturnUrl,
       isJwtValid: isJwtValid,
       signInUser: signInUser
     };
     return service;
+    
+    function generateReturnUrl(otp) {
+      var qs = $location.search();
+      console.log(qs);
+      var returnUrl = encodeURIComponent(qs.returnUrl);
+      var url = qs.processSignInUrl + '?returnUrl=' + returnUrl;
+      url += '&otp=' + otp;
+      $window.location.href = url;
+    }
 
     function isJwtValid() {
       var deferred = $q.defer();
@@ -40,6 +50,7 @@
           console.log(data.data);
           localStorage.setItem("jwt", data.data.jwt)
           localStorage.setItem("groups", data.data.groups)
+          service.generateReturnUrl(data.data.otp);
         }
       }, function(err) {
         console.log(err);
