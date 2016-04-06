@@ -1,0 +1,56 @@
+<html lang="en" ng-app="beaconGridApp">
+<head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/angular-material.css"/>
+      <link rel="stylesheet" href="css/login.css"/>
+      <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body class="beacongrid-blue">
+    <!-- Begin Header -->
+    <h2>AUTHENTICATION PORTAL</h2>
+    <h3>THIS IS FOR TEST ONLY - DESIGN TO COME WHEN ANGULAR TEMPLATE IS IN</h3>
+    <hr />
+    <!-- /End Header -->
+    
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    
+    <!-- Begin Single Page App Holder -->
+    <div class="container beacongrid-blue">
+        <div ng-view></div><!-- /single page app-->
+    </div>
+    <!-- /End Single Page App Holder -->
+    
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    
+    <!-- Beging footer -->
+    <hr />
+    <a href="#login">Login Page</a>&nbsp;|&nbsp;
+    <a href="#forgot-pass">Forgot Password Page</a>&nbsp;|&nbsp;
+    <a href="#reset-pass">Reset Password Page</a>
+    <!-- /End footer -->
+    
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+  
+    <!-- Your application bootstrap  -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.config.js"></script>
+    <script src="app/authentication/authentication.factory.js"></script>
+    <script src="app/api-map/api-map.factory.js"></script>
+    <script src="app/forgot-pass/forgot-pass.controller.js"></script>
+    <script src="app/sign-in/sign-in.controller.js"></script>
+    <script src="app/reset-pass/reset-pass.controller.js"></script>
+  
+</body>
+</html>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved. 
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+-->

@@ -1,0 +1,39 @@
+<!-- <div class="container">
+
+  <form ng-submit="vm.signIn()" name="signInForm">
+
+    <label>Email:</label>
+    <input type="email" ng-model="vm.email" required 
+           ng-disabled="vm.processingLogin">
+    <br />
+
+    <label>Password:</label>
+    <input type="password" ng-model="vm.password" required
+           ng-disabled="vm.processingLogin">
+    <br />
+
+    <button ng-disabled="signInForm.$invalid">Sign In</button>
+
+  </form>
+</div> -->
+
+<div class="login-modal-header beacongrid-blue">
+  <img src="../images/beacongridLogo.png" class="logo" />
+</div>
+<div class="login-modal">
+    <form name="form" class="login-modal" ng-submit="vm.authenticate(vm.email, vm.password)" role="form">
+        <div class="form-group">
+            <input type="text" ng-disabled="vm.processingLogin" name="email" id="email" placeholder="Email" class="form-control field" ng-model="vm.email" required />
+            <span ng-show="form.email.$dirty && form.email.$error.required" class="help-block">email is required</span>
+        </div>
+        <div class="form-group">
+            <input type="password" ng-disabled="vm.processingLogin"name="password" id="password" placeholder="Password" class="form-control field" ng-model="vm.password" required />
+            <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+        </div>
+        <div class="form-actions">
+            <button type="submit" class="btn beacongrid-blue beacongrid-light login-button">Login</button>
+        </div>
+    </form>
+    <div ng-show="vm.error" class="alert alert-danger">{{error}}</div>
+    <div ng-click="vm.forgotPass(vm.forgotPassEmail)">Forgot Pass</div>
+</div>

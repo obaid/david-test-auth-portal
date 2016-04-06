@@ -1,0 +1,47 @@
+.login-modal-header {
+  display: block;
+  width: 30%;
+  margin: 0 auto;
+  height: 90px;
+  margin-top: 60px;
+}
+
+.login-modal-header .logo {
+  display: block;
+  margin: 0 auto;
+  display: block;
+  padding: 20px;
+}
+
+.login-modal {
+  display: block;
+  width: 30%;
+  background: #FFFFFF;
+  padding: 40px;
+  margin: 0 auto;
+}
+
+.login-button {
+  width: 100%;
+  color: #FFFFFF;
+  border: none;
+  margin-top: 40px;
+  height: 45px;
+  border-radius: 5px;
+  cursor: hand;
+}
+.login-button:hover {
+  cursor: pointer;
+}
+
+.login-form .field {
+  border: none;
+  border-bottom: 1px solid #DDDDDD;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.login-form .field:focus {
+  border: none;
+  border-bottom: 1px solid #DDDDDD;
+}
