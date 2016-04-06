@@ -15,7 +15,7 @@
     vm.processingLogin = false;
     vm.signIn = signIn;
     
-    /* TODO - Make this promise get a otp - version 2.0
+     // TODO - Make this promise get a otp - version 2.0
     authenticationFactory.isJwtValid().then(function(data) {
       console.log('promise success data: ');
       console.log(data);
@@ -24,7 +24,7 @@
       console.log('promise fail err: ');
       console.log(err);
     });
-    */
+    
 
     function signIn() {
       vm.processingLogin = true;
