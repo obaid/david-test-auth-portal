@@ -1,36 +1,18 @@
 <div class="container">
 
-    <form ng-submit="vm.signIn()" name="signInForm">
+  <form ng-submit="vm.signIn()" name="signInForm">
 
-        <label>Email:</label>
-        <input type="email" ng-model="vm.email" required><br />
+    <label>Email:</label>
+    <input type="email" ng-model="vm.email" required 
+           ng-disabled="vm.processingLogin">
+    <br />
 
-        <label>Password:</label>
-        <input type="password" ng-model="vm.password" required><br />
+    <label>Password:</label>
+    <input type="password" ng-model="vm.password" required
+           ng-disabled="vm.processingLogin">
+    <br />
 
-        <button ng-disabled="signInForm.$invalid">Sign In</button>
+    <button ng-disabled="signInForm.$invalid">Sign In</button>
 
-    </form>
-
-    <h3>Chris TODO</h3>
-    <ul>
-        <li><strike>Make HTML Form - Username - Pass</strike></li>
-        <li><strike>Submit button disabled until both fields are filled out</strike></li>
-        <li>On Form Submit - Post to API to validate</li>
-        <li>
-            If Login Fails - Clear PW field and present user with failed msg
-        </li>
-        <li>
-            If Login Success - Assign token, get the users security group,
-            redirect to appropriate page
-        </li>
-    </ul>
-
-    <h3>David TODO</h3>
-    <ul>
-        <li>DB and APIs for the above things</li>
-        <li>
-            Write some logic in factories for Chris to pick up on and follow
-        </li>
-    </ul>
+  </form>
 </div>

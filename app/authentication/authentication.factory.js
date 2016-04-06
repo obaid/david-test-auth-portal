@@ -26,11 +26,25 @@
 
     function isJwtValid() {
       var deferred = $q.defer();
-      var localJwt = localStorage.getItem("jwt")
+      var localJwt = localStorage.getItem("jwt");
       if (localJwt === null) {
         deferred.reject('jwt is not valid');
       } else {
-        //
+        var url = 'https://yp9jn2o057.execute-api.us-east-1.amazonaws.com/dev/verifytoken';
+        var params = {
+          jwt: localStorage.getItem("jwt")
+        };
+        $http.post(url, params).then(function(data) {
+          console.log(data);
+          if (data.data.valid === true) {
+            deferred.resolve('jwt is valid');
+          } else {
+            deferred.reject('jwt is not valid');
+          }
+        }, function(err) {
+          console.log(err);
+          deferred.reject('jwt is not valid');
+        });
       }
       
       return deferred.promise;

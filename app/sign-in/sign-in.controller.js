@@ -12,19 +12,22 @@
     var vm = this;
     vm.email = '';
     vm.password = '';
+    vm.processingLogin = false;
     vm.signIn = signIn;
-
-    console.log(authenticationFactory.isJwtValid());
     
+    /* TODO - Make this promise get a otp - version 2.0
     authenticationFactory.isJwtValid().then(function(data) {
       console.log('promise success data: ');
       console.log(data);
     }, function(err) {
+      vm.processingLogin = false;
       console.log('promise fail err: ');
       console.log(err);
     });
+    */
 
     function signIn() {
+      vm.processingLogin = true;
       authenticationFactory.signInUser(vm.email, vm.password);
     }
 
