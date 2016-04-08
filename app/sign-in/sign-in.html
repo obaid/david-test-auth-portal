@@ -1,18 +1,26 @@
 <div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-signin">
+                <h2 class="signin-title">Please Sign-in to Continue</h2>
+                <form ng-submit="vm.signIn()" name="signInForm" class="form-sign-in">
 
-  <form ng-submit="vm.signIn()" name="signInForm">
+                    <!-- <label>EMAIL</label> -->
+                    <input type="email" ng-model="vm.email" required ng-disabled="vm.processingLogin" class="form-control round" placeholder="Email">
+                    <br />
 
-    <label>Email:</label>
-    <input type="email" ng-model="vm.email" required 
-           ng-disabled="vm.processingLogin">
-    <br />
+                    <!-- <label>PASSWORD</label> -->
+                    <input type="password" ng-model="vm.password" required ng-disabled="vm.processingLogin" class="form-control round" placeholder="Password">
+                    <br />
 
-    <label>Password:</label>
-    <input type="password" ng-model="vm.password" required
-           ng-disabled="vm.processingLogin">
-    <br />
+                    <button ng-disabled="signInForm.$invalid" class="btn btn-primary btn-block btn-lg">Sign In</button>
+                    <br/>
+                    
+                    <input type="checkbox">&nbsp;Remember Me<p>
 
-    <button ng-disabled="signInForm.$invalid">Sign In</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
-  </form>
 </div>
