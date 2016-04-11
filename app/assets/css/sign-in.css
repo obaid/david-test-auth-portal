@@ -4,3 +4,14 @@
 .panel-signin {
 	padding: 20px 30px 30px;
 }
+
+.page-content {
+  padding: 30px 30px;
+}
+
+.page-login-v3 .panel {
+  width: 400px;
+  margin-bottom: 45px;
+  background: #fff;
+  border-radius: 4px;
+}
